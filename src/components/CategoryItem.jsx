@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { mobile } from "../responsive";
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
     flex: 1;
@@ -10,6 +12,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    ${mobile({ height: "20vh" })}
 
 `
 
@@ -46,7 +49,8 @@ const CategoryItem = ({item}) => {
           <Image src = {item.img} />
           <Info>
               <Title>{item.title}</Title>
-              <Button>Adopt Me</Button>
+              <Link style={{ textDecoration: "none", color: "black" }} to="/product"><Button>Adopt Me</Button></Link>
+              
           </Info>
     </Container>
   )

@@ -10,14 +10,14 @@ export const sliderItems = [
       id: 2,
       img: "./pic/catcute.png",
       title: "Free Pet Package",
-      desc: "Don't be late! Get that 30% sales on cat food",
+      desc: "Take me home Meow Meow",
       bg: "fcf1ed",
     },
     {
       id: 3,
       img:  "./pic/catsit.png",
       title: "Meow Meow Event",
-      desc: "Don't be late! Get that 30% sales on cat food",
+      desc: "Come And Hug Me Please",
       bg: "fbf0f4",
     },
 ];

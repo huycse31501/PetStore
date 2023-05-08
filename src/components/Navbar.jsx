@@ -3,8 +3,13 @@ import styled from 'styled-components'
 import SearchIcon from '@mui/icons-material/Search';
 import { Badge } from '@mui/material';
 import PetsIcon from '@mui/icons-material/Pets';
+import { mobile } from "../responsive"
+import Register from '../pages/Register';
+import { Link } from 'react-router-dom'
+
 const Container = styled.div`
   height: 60px;
+  ${mobile({ height: "100%" })}
 `
 
 const Wrapper = styled.div`
@@ -12,6 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content:space-between;
   align-items: center;
+  ${mobile({ padding: "10px 0px"})}
 `
 
 const Left = styled.div`
@@ -22,8 +28,9 @@ const Left = styled.div`
 `;
 
 const Language = styled.span`
- font-size: 14px;
+ font-size: 20px;
  cursor: pointer; 
+ ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -35,6 +42,7 @@ const SearchContainer = styled.div`
 `
 const Input = styled.input`
   border: none;
+  ${mobile({ width: "50px" })}
 `
 const Center = styled.div`
   flex: 1;
@@ -42,6 +50,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
   font-weight: bold;
+  ${mobile({ fontSize: "12px" })}
 
 `
 const Right = styled.div`
@@ -49,13 +58,17 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `
+
+
 const Navbar = () => {
   return (
     <Container>
@@ -71,12 +84,20 @@ const Navbar = () => {
           <Logo>Huy Huy Cat World</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+        <MenuItem > <Link style={{ textDecoration: "none", color: "black" }} to="/">Home</Link>
+          </MenuItem>
+          <MenuItem > <Link style={{ textDecoration: "none", color: "black" }} to="/productlist">ShopList</Link>
+          </MenuItem>
+          <MenuItem > <Link style={{ textDecoration: "none", color: "black" }} to="/register">Register</Link>
+          </MenuItem>
+          <MenuItem><Link style={{ textDecoration: "none", color: "black"  }} to="/login">Login</Link>
+          </MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <PetsIcon/>
-            </Badge>
+            <Link style={{ textDecoration: "none", color: "blue"}} to="/cart">
+                <Badge badgeContent={2} color="primary">
+                  <PetsIcon/>
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>

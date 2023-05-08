@@ -1,0 +1,1 @@
+console.log(test1.__proto__ === test2.__proto__)
