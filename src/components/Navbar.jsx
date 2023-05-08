@@ -4,7 +4,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Badge } from '@mui/material';
 import PetsIcon from '@mui/icons-material/Pets';
 import { mobile } from "../responsive"
-import Register from '../pages/Register';
 import { Link } from 'react-router-dom'
 
 const Container = styled.div`
