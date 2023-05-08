@@ -27,7 +27,7 @@ const Left = styled.div`
 `;
 
 const Language = styled.span`
- font-size: 20px;
+  font-size: 14px;
  cursor: pointer; 
  ${mobile({ display: "none" })}
 `;
@@ -61,7 +61,7 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
-  font-size: 20px;
+  font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
